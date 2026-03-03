@@ -7,6 +7,7 @@ This project presents an end-to-end Retail Business Intelligence dashboard built
 The objective is to analyze Sales Performance, Promotion Impact, Inventory Health, and Membership Effectiveness using a structured star-schema data model.
 
 The dataset is synthetic and simulates 1 year of retail operations (2025).
+<img width="1186" height="674" alt="image" src="https://github.com/user-attachments/assets/0c88e1b1-8c50-4cb3-b5b5-511833dc4244" />
 
 🎯 Business Objectives
 
