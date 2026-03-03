@@ -1,5 +1,6 @@
 # Convenience-store-analyst-pbi
 Retail BI Dashboard (Power BI Case Study)
+
 📊 Project Overview
 
 This project presents an end-to-end Retail Business Intelligence dashboard built for a convenience store chain (GS25).
