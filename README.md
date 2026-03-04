@@ -1,117 +1,251 @@
 # Convenience-store-analyst-pbi
 Retail BI Dashboard (Power BI Case Study)
 
-📊 Project Overview
+<img width="743" height="498" alt="image" src="https://github.com/user-attachments/assets/0de89432-bcc5-422c-b5c3-066c3a93fd84" />
 
-This project presents an end-to-end Retail Business Intelligence dashboard built for a convenience store chain (GS25).
-The objective is to analyze Sales Performance, Promotion Impact, Inventory Health, and Membership Effectiveness using a structured star-schema data model.
+1. Business Context
 
-The dataset is synthetic and simulates 1 year of retail operations (2025).
-<img width="1186" height="674" alt="image" src="https://github.com/user-attachments/assets/0c88e1b1-8c50-4cb3-b5b5-511833dc4244" />
+Convenience store chains such as GS25 operate with high SKU variety, frequent replenishment cycles, and high transaction volume.
 
-🎯 Business Objectives
+To support operational decisions, this project simulates a retail analytics dashboard designed to help business stakeholders monitor:
 
-* Monitor overall sales & profitability
+* Sales performance
 
-* Evaluate promotion effectiveness
+* Product category contribution
 
-* Identify inventory risk & out-of-stock impact
+* Store operations efficiency
 
-* Analyze customer membership contribution
+* Inventory health
 
-* Provide cross-functional insights for management teams
+* Customer membership behavior
 
-🧱 Data Model
+The dashboard aims to answer:
 
-Star schema design:
+* Which categories drive the most revenue?
 
-* Fact Tables
+* Which store formats perform best?
 
-* transactions_header
+* When are stores most operationally stressed?
 
-* transactions_lines
+* Are stockouts affecting sales?
 
-* inventory_weekly
+* Do membership programs drive revenue?
 
-* Dimension Tables
+  <img width="1220" height="671" alt="image" src="https://github.com/user-attachments/assets/38fe0514-6fcc-40a9-89ef-36c4da2d2fd2" />
 
-* calendar
+Problem
 
-* stores
+Retail performance must be monitored continuously to detect seasonal trends and store format performance differences.
 
-* products
+Detection
 
-* customers
+The dashboard shows:
 
-* promotions
+* Total Net Sales: 15B
 
-Relationships follow one-to-many modeling best practices.
+* Gross Profit: 5B
 
-📈 Key KPIs Implemented
-Sales & Profit
+* GM%: 35%
 
-* Net Sales
+* Transactions: 60K
 
-* Gross Profit
+* AOV: 253K
 
-* GM%
+* Items per Basket: 5.91
 
-* Transactions
+From the revenue trend:
 
-* AOV
+* Sales peaked in Q3
 
-* UPT
+* Sales declined sharply in Q4
+  
+  <img width="592" height="224" alt="image" src="https://github.com/user-attachments/assets/d5ee4fb3-5848-49fd-989a-0b04c282ee21" />
 
- Promotion
+Root Cause Hypothesis
 
-* Discount Rate
+Street stores likely benefit from:
 
-* Sales Promo vs Non-Promo
+* Higher daily foot traffic
 
- Inventory
+* Longer operating hours
 
-* OOS Rate
+* Higher impulse purchases
 
-* Inventory Risk Matrix
+The Q4 drop may be associated with:
 
- Customer
+* Seasonality
 
-* % Sales from Member
+* Reduced footfall
 
-* Tier Breakdown
+* Inventory issues
 
-* Member vs Non-Member AOV
+  <img width="1214" height="670" alt="image" src="https://github.com/user-attachments/assets/e833e31a-3904-4680-9390-a780905af99b" />
 
-* Join Cohort Analysis
+Problem
 
-🔍 Key Insights
+Retailers must understand which product categories drive revenue and profitability.
 
-* Beverage category drives highest revenue with strong margin contribution.
+Detection
 
-* Promotions generate revenue spikes but reduce gross margin.
+Category revenue distribution shows:
 
-* High OOS rate correlates with weaker store performance.
+Top categories:
 
-* Members demonstrate higher AOV and stronger revenue contribution.
+1️⃣ Beverage
+2️⃣ Food
+3️⃣ Personal Care
 
-🛠 Tools & Skills Demonstrated
+Lower contribution:
 
-* Power BI
+* Tobacco
 
-* Data Modeling (Star Schema)
+* Household
 
-* Advanced DAX
+However, profitability differs.
+Root Cause Hypothesis
 
-* Retail KPI Structuring
+Possible drivers:
 
-* Cross-functional Business Analysis
+* Beverage products have high purchase frequency
 
-* Insight Communication
+* Personal care items have higher margins
 
-📌 Notes
+* Food products may suffer from higher cost of goods
 
-* Dataset is synthetic for portfolio purposes.
+This suggests sales leaders are not always profit leaders.
+<img width="1217" height="694" alt="image" src="https://github.com/user-attachments/assets/69a99621-4557-4e3b-9809-6961091ff068" />
+Problem
 
-* Power BI source file is not publicly shared.
+Convenience stores must manage staffing and operations across different shifts.
 
-* Repository focuses on methodology, KPI logic, and dashboard design approach.
+Detection
+
+<img width="566" height="226" alt="image" src="https://github.com/user-attachments/assets/557cad3f-2f28-4fb9-ae00-e62652358bc7" />
+
+Operational heatmap shows peak activity around:
+
+* 7AM – 10AM
+
+* 11AM – 2PM
+
+Wait time distribution indicates:
+
+Most transactions complete within 40–70 seconds.
+
+Root Cause Hypothesis
+
+Morning peak may be driven by:
+
+* commuters
+
+* breakfast purchases
+
+* coffee
+
+Afternoon activity may be lunch-related.
+
+Night shift demand is lower but still significant for convenience retail.
+<img width="1226" height="653" alt="image" src="https://github.com/user-attachments/assets/86671bf4-dbf8-4176-b6c3-7ae6e1b2da25" />
+Problem
+
+Regional store performance can vary significantly due to location characteristics.
+
+Detection
+
+Regional revenue distribution:
+
+Region	Revenue Share
+North	37%
+South	31%
+Central	30%
+
+However, store-level analysis reveals variation in:
+
+* sales per m²
+
+* OOS rate
+
+* store productivity
+
+Root Cause Hypothesis
+
+Performance differences may stem from:
+<img width="1214" height="657" alt="image" src="https://github.com/user-attachments/assets/600e8b07-866c-4506-9621-6727932a9e4e" />
+
+* urban density
+
+* store placement
+
+* customer demographics
+
+<img width="1224" height="685" alt="image" src="https://github.com/user-attachments/assets/5f3d6dbe-bf05-4104-b604-d55f39264c20" />
+Problem
+
+Stockouts are critical for convenience stores where customers expect immediate availability.
+
+Detection
+
+<img width="585" height="227" alt="image" src="https://github.com/user-attachments/assets/9ab75b64-52f0-44ba-a481-9679ed4bf461" />
+
+
+Inventory turnover analysis shows:
+
+High turnover:
+
+* Personal Care
+
+* Household
+
+Lower turnover:
+
+* Tobacco
+
+* Snack
+
+Root Cause Hypothesis
+
+High OOS rate in fast-moving categories suggests:
+
+* demand underestimation
+
+* reorder thresholds set too low
+
+* supply chain delay
+
+Stockouts in high-frequency categories may directly reduce revenue.
+
+**Key Insights
+**
+
+1️⃣ Beverage is the largest revenue contributor
+
+2️⃣ Street-format stores dominate revenue performance
+
+3️⃣ Morning shift generates the highest sales
+
+4️⃣ Personal care category suffers from high stockout rate
+
+**Business Recommendations
+**
+
+Improve revenue and operational efficiency by:
+
+Inventory
+
+* Increase safety stock for high OOS categories
+
+* Improve demand forecasting
+
+Store Operations
+
+* Allocate more staff during morning peak
+
+* Product Strategy
+
+* Promote high-margin categories
+
+Customer Strategy
+
+* Expand membership programs
+
+* Offer targeted promotions to non-members
